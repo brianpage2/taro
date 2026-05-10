@@ -100,15 +100,17 @@ export default function HomePage() {
                 </p>
               </div>
 
-              {/* 테스트 카드 그리드 (3개마다 광고) */}
+              {/* 테스트 카드 그리드 */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {tests.map((test, i) => {
                   const shortSlug = SHORT_VERSION_MAP[test.slug]
                   const shortVersion = shortSlug ? TEST_REGISTRY.find(t => t.slug === shortSlug) : undefined
+                  const isLast = i === tests.length - 1
+                  const showAd = (i + 1) % 3 === 0 || isLast
                   return (
                     <>
                       <TestCard key={test.slug} test={test} shortVersion={shortVersion} />
-                      {(i + 1) % 3 === 0 && (
+                      {showAd && (
                         <div key={`ad-${i}`} className="col-span-1 sm:col-span-2 lg:col-span-3">
                           <AdSlot slot="3089755852" format="horizontal" />
                         </div>
