@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import type { TestData } from '@/types/test'
 import type { Answer } from '@/lib/scoring'
 import Image from 'next/image'
+import AdSlot from '@/components/ads/AdSlot'
 import QuestionCard from './QuestionCard'
 import ProgressBar from './ProgressBar'
 
@@ -119,6 +120,10 @@ function ResultTypeIntro({ test, onStart, resumeMode }: { test: TestData; onStar
         >
           {resumeMode ? '계속 풀기' : '테스트 시작하기'}
         </button>
+
+        <div className="mt-10">
+          <AdSlot slot="3089755852" format="horizontal" />
+        </div>
       </div>
     </div>
   )
