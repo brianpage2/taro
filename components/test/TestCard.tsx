@@ -63,8 +63,8 @@ export default function TestCard({ test, shortVersion }: TestCardProps) {
               {shortVersion.questionCount}문항 · 약 {shortVersion.estimatedMinutes}분
             </span>
           </div>
-          <span className="text-[13px] text-primary" style={{ letterSpacing: '-0.12px' }}>
-            빠른 버전 →
+          <span className="text-[13px] text-white font-normal bg-primary px-3 py-1.5 rounded-pill" style={{ letterSpacing: '-0.12px' }}>
+            빠른 버전
           </span>
         </Link>
       )}
