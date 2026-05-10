@@ -49,7 +49,13 @@ function ResultTypeIntro({ test, onStart, resumeMode }: { test: TestData; onStar
           <div className="mb-10">
             <div className="grid grid-cols-2 gap-2">
               {Object.keys(scoring.typeMap!).map((type) => (
-                <div key={type} className="rounded-apple overflow-hidden">
+                <a
+                  key={type}
+                  href={`/og/mbti-${type}.jpg`}
+                  download={`mbti-${type}.jpg`}
+                  className="rounded-apple overflow-hidden block relative group"
+                  style={{ textDecoration: 'none' }}
+                >
                   <Image
                     src={`/og/mbti-${type}.jpg`}
                     alt={`${type} ${scoring.typeMap![type].label}`}
@@ -57,7 +63,10 @@ function ResultTypeIntro({ test, onStart, resumeMode }: { test: TestData; onStar
                     height={630}
                     className="w-full h-auto"
                   />
-                </div>
+                  <span className="absolute bottom-2 right-2 bg-black/60 text-white text-[11px] px-2 py-1 rounded-pill opacity-0 group-hover:opacity-100 transition-opacity">
+                    ↓ 저장
+                  </span>
+                </a>
               ))}
             </div>
           </div>

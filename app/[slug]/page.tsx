@@ -235,7 +235,13 @@ export default async function TestLandingPage({ params }: Props) {
                 ['ISTJ','현실주의자'],['ISFJ','수호자'],['ESTJ','경영자'],['ESFJ','집정관'],
                 ['ISTP','만능재주꾼'],['ISFP','모험가'],['ESTP','사업가'],['ESFP','연예인'],
               ].map(([type, label]) => (
-                <div key={type} className="rounded-apple overflow-hidden">
+                <a
+                  key={type}
+                  href={`/og/mbti-${type}.jpg`}
+                  download={`mbti-${type}.jpg`}
+                  className="rounded-apple overflow-hidden block relative group"
+                  style={{ textDecoration: 'none' }}
+                >
                   <Image
                     src={`/og/mbti-${type}.jpg`}
                     alt={`${type} ${label}`}
@@ -243,7 +249,10 @@ export default async function TestLandingPage({ params }: Props) {
                     height={630}
                     className="w-full h-auto"
                   />
-                </div>
+                  <span className="absolute bottom-2 right-2 bg-black/60 text-white text-[11px] px-2 py-1 rounded-pill opacity-0 group-hover:opacity-100 transition-opacity">
+                    ↓ 저장
+                  </span>
+                </a>
               ))}
             </div>
           </div>

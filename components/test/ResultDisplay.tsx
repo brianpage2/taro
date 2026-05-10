@@ -24,16 +24,25 @@ interface MultiAxisResultProps {
 const MBTI_SLUGS = new Set(['mbti', 'mbti-short'])
 
 function MbtiResultCard({ result }: { result: TypeResult }) {
+  const src = `/og/mbti-${result.id}.jpg`
   return (
-    <div className="rounded-apple overflow-hidden mb-8">
+    <div className="rounded-apple overflow-hidden mb-8 relative group">
       <Image
-        src={`/og/mbti-${result.id}.jpg`}
+        src={src}
         alt={`${result.id} ${result.label}`}
         width={1200}
         height={630}
         className="w-full h-auto"
         priority
       />
+      <a
+        href={src}
+        download={`mbti-${result.id}.jpg`}
+        className="absolute bottom-3 right-3 bg-black/60 text-white text-[12px] px-3 py-1.5 rounded-pill opacity-0 group-hover:opacity-100 transition-opacity"
+        style={{ letterSpacing: '-0.12px' }}
+      >
+        ↓ 이미지 저장
+      </a>
     </div>
   )
 }
