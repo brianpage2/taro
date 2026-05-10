@@ -5,7 +5,7 @@ export const TEST_REGISTRY: TestMeta[] = [
     slug: 'mbti',
     title: 'MBTI 성격유형검사',
     shortTitle: 'MBTI',
-    description: 'MBTI 성격유형검사로 나의 성격 유형을 무료로 알아보세요. 60문항으로 16가지 성격 유형 중 나의 유형을 확인할 수 있습니다.',
+    description: 'MBTI 성격유형검사로 나의 성격 유형을 무료로 알아보세요. 60문항으로 16가지 성격 유형을 확인하세요.',
     keywords: ['MBTI 테스트', 'MBTI 성격유형', 'MBTI 무료', '성격유형검사'],
     category: '성격',
     questionCount: 60,
@@ -43,7 +43,7 @@ export const TEST_REGISTRY: TestMeta[] = [
   },
   {
     slug: 'adhd',
-    title: 'ADHD 자가진단 테스트 (성인용)',
+    title: 'ADHD 자가진단 테스트 (성인)',
     shortTitle: 'ADHD',
     description: 'WHO ASRS-v1.1 기반 성인 ADHD 자가진단 테스트입니다. 18문항으로 주의력결핍·과잉행동장애 증상을 무료로 확인하세요.',
     keywords: ['ADHD 자가진단', 'ADHD 테스트', '성인 ADHD', 'ADHD 증상 체크'],
@@ -177,7 +177,7 @@ export const TEST_REGISTRY: TestMeta[] = [
   },
   {
     slug: 'attachment',
-    title: '연애 유형 테스트 (애착 유형)',
+    title: '연애 유형 테스트 — 애착 유형',
     shortTitle: '연애 유형',
     description: '나의 연애 유형은 안정형, 불안형, 회피형, 혼란형 중 어떤 유형일까요? 20문항으로 나의 애착 유형을 무료로 알아보세요.',
     keywords: ['연애 유형 테스트', '애착 유형 테스트', '연애 스타일 테스트', '불안형 회피형', '안정형 애착'],
