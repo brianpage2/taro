@@ -125,7 +125,7 @@ export default async function TestLandingPage({ params }: Props) {
 
         {/* 광고 — 버튼 아래 */}
         <div className="mt-10 max-w-[580px] mx-auto w-full">
-          <AdSlot slot="XXXXXXXXXX" format="horizontal" />
+          <AdSlot slot="3089755852" format="horizontal" />
         </div>
       </section>
 

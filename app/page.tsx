@@ -110,7 +110,7 @@ export default function HomePage() {
                       <TestCard key={test.slug} test={test} shortVersion={shortVersion} />
                       {(i + 1) % 3 === 0 && (
                         <div key={`ad-${i}`} className="col-span-1 sm:col-span-2 lg:col-span-3">
-                          <AdSlot slot="XXXXXXXXXX" format="horizontal" />
+                          <AdSlot slot="3089755852" format="horizontal" />
                         </div>
                       )}
                     </>

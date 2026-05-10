@@ -5,7 +5,8 @@
 - 목적: 한국어 무료 심리테스트 (구글 SEO 상위노출 최우선)
 - Stack: Next.js 14 App Router, TypeScript, Tailwind CSS
 - 개발 서버: http://localhost:3400 (`npm run dev`)
-- 배포: GitHub → Vercel
+- GitHub: https://github.com/brianpage2/taro
+- 배포: GitHub → Vercel (taro-mauve-alpha.vercel.app)
 
 ## 새 테스트 추가 (3단계)
 1. `data/tests/[slug].ts` 생성 → `TestData` 인터페이스 만족
@@ -21,18 +22,19 @@
 - 새 페이지 canonical URL 반드시 설정
 
 ## 광고 규칙
-- 자동광고: `app/layout.tsx`의 AdSense 스크립트로 처리
+- 자동광고: `app/layout.tsx`의 AdSense 스크립트로 처리 (NEXT_PUBLIC_ADSENSE_ID 필요)
+- AdSense 승인: codedanswer.com 도메인 승인 완료 → 같은 Publisher ID로 taro 서브도메인 사용
+- 자동광고 미작동 시: Vercel 환경변수에 NEXT_PUBLIC_ADSENSE_ID 입력 후 Redeploy
 - 수동광고: `components/ads/AdSlot.tsx`만 사용 (직접 `<ins>` 작성 금지)
 - 모든 AdSlot 주변에 버튼/링크 300px 이상 거리 유지
 - 개발 환경에서는 placeholder 박스 자동 표시
 
-## 환경변수 (.env.local)
+## 환경변수 (Vercel + .env.local 동일하게 설정)
 ```
 NEXT_PUBLIC_SITE_URL=https://taro.codedanswer.com
-NEXT_PUBLIC_ADSENSE_ID=ca-pub-XXXXXXXXXX      ← AdSense 발급 후 입력
+NEXT_PUBLIC_ADSENSE_ID=ca-pub-XXXXXXXXXX      ← codedanswer.com AdSense Publisher ID
 NEXT_PUBLIC_GOOGLE_VERIFICATION=               ← Search Console 인증 토큰
 NEXT_PUBLIC_NAVER_VERIFICATION=                ← 네이버 웹마스터 인증 토큰
-NEXT_PUBLIC_KAKAO_JS_KEY=                      ← 카카오 공유 SDK 키
 ```
 
 ## 채점 로직 (lib/scoring.ts)
