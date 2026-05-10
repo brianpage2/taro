@@ -54,12 +54,12 @@ export default function TestCard({ test, shortVersion }: TestCardProps) {
       {shortVersion && (
         <Link
           href={`/${shortVersion.slug}`}
-          className="flex items-center justify-between px-4 py-3 bg-canvas border border-hairline rounded-apple transition-all duration-200 hover:border-primary hover:shadow-sm active:scale-[0.98]"
+          className="flex items-center justify-between px-4 py-3 rounded-apple transition-all duration-200 hover:shadow-sm active:scale-[0.98] border border-primary/30 bg-primary/5"
           style={{ textDecoration: 'none' }}
         >
           <div className="flex items-center gap-2">
-            <span className="text-[11px] text-white bg-ink-faint px-2 py-0.5 rounded-pill" style={{ letterSpacing: '0.02em' }}>간단</span>
-            <span className="text-[14px] text-ink-faint" style={{ letterSpacing: '-0.224px' }}>
+            <span className="text-[11px] text-white bg-primary px-2 py-0.5 rounded-pill font-semibold" style={{ letterSpacing: '0.02em' }}>간단</span>
+            <span className="text-[14px] text-ink font-medium" style={{ letterSpacing: '-0.224px' }}>
               {shortVersion.questionCount}문항 · 약 {shortVersion.estimatedMinutes}분
             </span>
           </div>
