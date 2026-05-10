@@ -38,6 +38,14 @@ export const mbti: TestData = {
       question: '이 테스트는 공식 MBTI와 같은 건가요?',
       answer: '이 테스트는 공식 MBTI(Myers-Briggs Company 소유)가 아닌, 동일한 이론 기반의 IPIP 공개도메인 구현체입니다. 참고용으로만 활용하시기 바랍니다.',
     },
+    {
+      question: 'MBTI 유형별 궁합이 있나요?',
+      answer: 'MBTI 유형 간 궁합은 참고 자료일 뿐 절대적이지 않습니다. 일반적으로 직관형(N)끼리, 혹은 상호보완적인 유형(예: INTJ-ENFP)이 잘 맞는다고 알려져 있지만, 실제 관계는 개인의 노력과 소통이 더 중요합니다.',
+    },
+    {
+      question: '한국에서 가장 많은 MBTI 유형은 무엇인가요?',
+      answer: '한국에서는 ISTJ(현실주의자), ISFJ(수호자), INFP(중재자)가 비교적 많이 나타나는 유형으로 알려져 있습니다. 하지만 표본에 따라 결과가 달라질 수 있습니다.',
+    },
   ],
   questions: [
     { id: 1, text: '파티나 모임에서 새로운 사람들과 이야기하는 것이 즐겁다', type: 'likert5', axis: 'E', reverse: false },
