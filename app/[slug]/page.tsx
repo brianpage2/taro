@@ -279,6 +279,9 @@ export default async function TestLandingPage({ params }: Props) {
         >
           테스트 시작하기
         </Link>
+        <div className="mt-12 max-w-[580px] mx-auto">
+          <AdSlot slot="3089755852" format="horizontal" />
+        </div>
       </section>
 
       {/* FAQ 타일 */}

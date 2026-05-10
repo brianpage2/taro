@@ -5,7 +5,6 @@ import { useRouter } from 'next/navigation'
 import type { TestData } from '@/types/test'
 import type { Answer } from '@/lib/scoring'
 import Image from 'next/image'
-import AdSlot from '@/components/ads/AdSlot'
 import QuestionCard from './QuestionCard'
 import ProgressBar from './ProgressBar'
 
@@ -112,10 +111,6 @@ function ResultTypeIntro({ test, onStart, resumeMode }: { test: TestData; onStar
             ))}
           </div>
         )}
-
-        <div className="mb-10">
-          <AdSlot slot="3089755852" format="horizontal" />
-        </div>
 
         <button
           onClick={onStart}
