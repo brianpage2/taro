@@ -102,22 +102,15 @@ export default function HomePage() {
 
               {/* 테스트 카드 그리드 */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {tests.map((test, i) => {
+                {tests.map((test) => {
                   const shortSlug = SHORT_VERSION_MAP[test.slug]
                   const shortVersion = shortSlug ? TEST_REGISTRY.find(t => t.slug === shortSlug) : undefined
-                  const isLast = i === tests.length - 1
-                  const showAd = (i + 1) % 3 === 0 || isLast
-                  return (
-                    <>
-                      <TestCard key={test.slug} test={test} shortVersion={shortVersion} />
-                      {showAd && (
-                        <div key={`ad-${i}`} className="col-span-1 sm:col-span-2 lg:col-span-3">
-                          <AdSlot slot="3089755852" format="horizontal" />
-                        </div>
-                      )}
-                    </>
-                  )
+                  return <TestCard key={test.slug} test={test} shortVersion={shortVersion} />
                 })}
+              </div>
+              {/* 섹션당 광고 1개 — 카드 아래 */}
+              <div className="mt-8">
+                <AdSlot slot="3089755852" format="horizontal" />
               </div>
             </div>
           </section>

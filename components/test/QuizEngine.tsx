@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import type { TestData } from '@/types/test'
 import type { Answer } from '@/lib/scoring'
 import Image from 'next/image'
+import AdSlot from '@/components/ads/AdSlot'
 import QuestionCard from './QuestionCard'
 import ProgressBar from './ProgressBar'
 
