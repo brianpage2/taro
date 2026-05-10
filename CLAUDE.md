@@ -66,7 +66,7 @@ NEXT_PUBLIC_NAVER_VERIFICATION=                ← 네이버 웹마스터 인증
 - 운영 URL: https://taro.codedanswer.com
 - Google Search Console: 인증 완료 (2026-05-10), sitemap 제출 완료
 - AdSense: ca-pub-6449761611054213 (codedanswer.com 승인, 자동광고 활성)
-- 네이버 웹마스터: 미등록
+- 네이버 웹마스터: 등록 완료 (2026-05-10)
 
 ## 금지사항
 - `console.log` 프로덕션 코드에 남기지 않기
