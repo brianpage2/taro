@@ -2,26 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer base {
+  body {
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+    font-size: 17px;
+    line-height: 1.47;
+    color: #1d1d1f;
+    background: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  * {
+    box-sizing: border-box;
+  }
+
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+@layer components {
+  /* Apple pill button */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-[22px] py-[11px] bg-primary text-white text-[17px] font-normal rounded-pill transition-transform active:scale-95 focus:outline-2 focus:outline-primary-focus;
+    letter-spacing: -0.374px;
+  }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-[22px] py-[11px] text-primary text-[17px] font-normal rounded-pill border border-primary transition-transform active:scale-95;
+    letter-spacing: -0.374px;
+  }
+
+  /* Apple utility button (dark, sm radius) */
+  .btn-utility {
+    @apply inline-flex items-center justify-center px-[15px] py-[8px] bg-ink text-white text-[14px] font-normal rounded-apple-sm transition-transform active:scale-95;
+    letter-spacing: -0.224px;
+  }
+
+  /* Apple body text */
+  .text-apple-body {
+    font-size: 17px;
+    line-height: 1.47;
+    letter-spacing: -0.374px;
+  }
+
+  /* Apple display */
+  .text-apple-display {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.10;
+  }
+
+  /* Apple hero */
+  .text-apple-hero {
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1.07;
+    letter-spacing: -0.28px;
   }
 }
