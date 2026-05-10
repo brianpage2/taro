@@ -41,7 +41,6 @@ export default function AdSlot({ slot, format = 'auto', className = '' }: AdSlot
 
   return (
     <div className={className}>
-      <p className="text-xs text-gray-400 mb-1 text-center">광고</p>
       <ins
         ref={adRef}
         className="adsbygoogle"
