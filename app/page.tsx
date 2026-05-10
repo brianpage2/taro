@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { TEST_REGISTRY } from '@/data/index'
 import TestCard from '@/components/test/TestCard'
 import AdSlot from '@/components/ads/AdSlot'
+import SiteShareButton from '@/components/SiteShareButton'
 
 export const metadata: Metadata = {
   title: '무료 심리테스트 | MBTI · 우울증 · 불안 · 스트레스 · 번아웃 · ADHD',
@@ -117,6 +118,9 @@ export default function HomePage() {
           </section>
         )
       })}
+
+      {/* 사이트 공유 */}
+      <SiteShareButton />
 
       {/* 면책 고지 타일 */}
       <section className="bg-parchment border-t border-hairline">
